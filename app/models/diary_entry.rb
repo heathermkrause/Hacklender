@@ -1,3 +1,3 @@
 class DiaryEntry < ActiveRecord::Base
-  attr_accessible :description, :name, :user_name
+  attr_accessible :description, :name, :user_name, :mood
 end
