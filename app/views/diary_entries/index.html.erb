@@ -1,6 +1,7 @@
-<h1>Listing diary_entries</h1>
+<h1>Heather's Hacklendar</h1>
 
-<table>
+<table class = "table table-striped">
+  <thread>
   <tr>
     <th>Title</th>
     <th>Description</th>
@@ -9,19 +10,22 @@
     <th></th>
     <th></th>
   </tr>
+</thread>
 
 <% @diary_entries.each do |diary_entry| %>
   <tr>
-    <td><%= diary_entry.name %></td>
+    <td><%= diary_entry.name%></td>
     <td><%= diary_entry.description %></td>
     <td><%= diary_entry.mood %></td>
-    <td><%= link_to 'Show', diary_entry %></td>
-    <td><%= link_to 'Edit', edit_diary_entry_path(diary_entry) %></td>
-    <td><%= link_to 'Destroy', diary_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+
+    <td><%= link_to 'Show', diary_entry, :class => 'btn btn-info'  %></td>
+    <td><%= link_to 'Edit', edit_diary_entry_path(diary_entry), :class => 'btn btn-warning' %></td>
+    <td><%= link_to 'Destroy', diary_entry, :class => 'btn btn-danger' ,method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Diary entry', new_diary_entry_path %>
+<%= link_to 'New Diary entry', new_diary_entry_path,:class => 'btn btn-success' %>

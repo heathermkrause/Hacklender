@@ -1,4 +1,5 @@
 <%= form_for(@diary_entry) do |f| %>
+<fieldset>
   <% if @diary_entry.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@diary_entry.errors.count, "error") %> prohibited this diary_entry from being saved:</h2>
@@ -21,9 +22,16 @@
   </div>
   <div class="field">
     <%= f.label :mood %><br />
-    <%= f.text_area :mood %>
+    <select>
+  <option>Happy</option>
+  <option>Sad</option>
+  <option>Angry</option>
+  <option>Tired</option>
+  <option>Confused</option>
+</select>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit  %>
   </div>
+  </fieldset>
 <% end %>
