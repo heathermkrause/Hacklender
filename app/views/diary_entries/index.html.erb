@@ -2,9 +2,8 @@
 
 <table>
   <tr>
-    <th>Name</th>
+    <th>Title</th>
     <th>Description</th>
-    <th>User Name</th>
     <th>Mood</th>
     <th></th>
     <th></th>
@@ -15,7 +14,6 @@
   <tr>
     <td><%= diary_entry.name %></td>
     <td><%= diary_entry.description %></td>
-    <td><%= diary_entry.user_name %></td>
     <td><%= diary_entry.mood %></td>
     <td><%= link_to 'Show', diary_entry %></td>
     <td><%= link_to 'Edit', edit_diary_entry_path(diary_entry) %></td>
