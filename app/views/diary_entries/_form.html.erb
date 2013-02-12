@@ -4,6 +4,8 @@
     <div id="error_explanation">
       <h2><%= pluralize(@diary_entry.errors.count, "error") %> prohibited this diary_entry from being saved:</h2>
 
+
+
       <ul>
       <% @diary_entry.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -34,7 +36,6 @@
   <option>Sad</option>
   <option>Angry</option>
   <option>Tired</option>
-  <option>Confused</option>
 </select>
   </div>
   <div class="form-actions">
